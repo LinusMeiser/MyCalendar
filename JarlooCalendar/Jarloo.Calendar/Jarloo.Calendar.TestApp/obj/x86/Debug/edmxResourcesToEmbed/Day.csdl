@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DaysDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Days">
+    <Key>
+      <PropertyRef Name="date" />
+    </Key>
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DaysDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Days" EntityType="Self.Days" />
+  </EntityContainer>
+</Schema>
